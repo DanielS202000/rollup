@@ -1,12 +1,12 @@
 const $body = document.querySelector("body");
-const API = "https://api.escuelajs.com/api/v1/products/?offset=5&Limit=10";
+const API = "https://api.escuelajs.co/api/v1/products/?offset=5&Limit=10";
 import logo from './assets/logo.png';
 import './styles/styles.css';
 
 const main = async () =>{
     const response = await fetch(API);
     const products = await response.json();
-    const output = products.map((products) =>{
+    const output = products.map((product) =>{
         return `
         <article class="Card">
         <img src ="${product.images[0]}"/>
